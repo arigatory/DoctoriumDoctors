@@ -16,6 +16,7 @@ namespace DoctoriumDoctors.Models
         public ICollection<Certificate> Certificates { get; set; }
         public ICollection<EducationItem> EducationItems { get; set; }
         public Specialty Speciality { get; set; }
+        public Guid SpecialityId { get; set; }
         public DateTime? StartOfWorkExperience { get; set; }
         public bool Accepted { get; set; }
     }

@@ -1,3 +1,4 @@
+using DoctoriumDoctors.Models;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -14,6 +15,8 @@ namespace DoctoriumDoctors
     {
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddScoped<IDoctorRepository, MockDoctorRepository>();
+            services.AddScoped<ISpecialityRepository, MockSpecialtyRepository>();
             services.AddControllersWithViews();
         }
 
